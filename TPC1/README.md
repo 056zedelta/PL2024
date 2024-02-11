@@ -17,3 +17,7 @@ A função **despOrd** cria uma lista de modalidades únicas a partir do dicion�
 A função **aptidaoPercent** recebe um dicionário que contém informações sobre atletas. A partir deste, incrementa a variável definida para cada o aptos e inaptos e posteriormente calcula a sua percentagem.
 
 A função **escalaoAtletas** calcula a distribuição de atletas por intervalo etário, onde cada escalão é definido por um intervalo de 5 anos. Depois retorna um dicionario onde as chaves são os intervalos e os values são os atletas neles contidos. Depois as chaves do dicionário são ordenadas em ordem crescente de idade e à medida que estas são iteradas, é imprimindo o intervalo de idade e o número de atletas correspondentes em cada escalão. 
+
+## Resultados
+
+<img src='Captura de ecrã de 2024-02-11 21-25-41.png' width='250'>
