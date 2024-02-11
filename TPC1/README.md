@@ -20,4 +20,4 @@ A função **escalaoAtletas** calcula a distribuição de atletas por intervalo 
 
 ## Resultados
 
-<img src='Captura de ecrã de 2024-02-11 21-25-41.png' width='250'>
+<img src='Captura de ecrã de 2024-02-11 21-25-41.png' width='400'>
