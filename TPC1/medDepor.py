@@ -28,16 +28,14 @@ meu_dicionario = dicionaryCSV('emd.csv')
 def despOrd(dicionario):
     modalidades = []
     for valor in dicionario.values():
-        modalidades.append(valor['modalidade'])
-    modalidades_ordenadas = sorted(modalidades)
-    return modalidades_ordenadas
+        modalidades.append(valor['modalidade'])        
+    modalidades_unicas = sorted(set(modalidades))
+    for i, modalidade in enumerate(modalidades_unicas, start=1):
+        print(f"{i}. {modalidade}")
 
 modalidades_ordenadas = despOrd(meu_dicionario)
 
-print(modalidades_ordenadas)
-
-
-def calcular_percentagens_aptidao(dicionario):
+def aptidaoPercent(dicionario):
     total_atletas = len(dicionario)
     aptos = 0
     inaptos = 0
@@ -53,17 +51,17 @@ def calcular_percentagens_aptidao(dicionario):
 
     return percentagem_aptos, percentagem_inaptos
 
-percentagem_aptos, percentagem_inaptos = calcular_percentagens_aptidao(meu_dicionario)
+percentagem_aptos, percentagem_inaptos = aptidaoPercent(meu_dicionario)
 
 print(f"Percentagem de atletas aptos: {percentagem_aptos:.2f}%")
 print(f"Percentagem de atletas inaptos: {percentagem_inaptos:.2f}%")
 
 
-def distribuicao_atletas_por_escalao(dicionario):
+def escalaoAtletas(dicionario):
     distribuicao = {}
     for valor in dicionario.values():
         idade = int(valor['idade'])
-        escalao = idade // 5 * 5  # Arredonda para baixo para o múltiplo de 5 mais próximo
+        escalao = idade // 5 * 5 
         chave_escalao = f"[{escalao}-{escalao + 4}]"
         if chave_escalao in distribuicao:
             distribuicao[chave_escalao] += 1
@@ -71,7 +69,10 @@ def distribuicao_atletas_por_escalao(dicionario):
             distribuicao[chave_escalao] = 1
     return distribuicao
 
-distribuicao_escalao_etario = distribuicao_atletas_por_escalao(meu_dicionario)
+distribuicao_escalao_etario = escalaoAtletas(meu_dicionario)
 
-for escalao, quantidade in distribuicao_escalao_etario.items():
+chaves_ordenadas = sorted(distribuicao_escalao_etario.keys(), key=lambda x: int(x[1:3]))
+
+for escalao in chaves_ordenadas:
+    quantidade = distribuicao_escalao_etario[escalao]
     print(f"{escalao}: {quantidade} atletas")
