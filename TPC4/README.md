@@ -21,4 +21,4 @@ Finalmente criei o objetico lexer, baseado nas especificações de tokens defini
 Para executar basta correr o comando: `python3 tpc4.py`.
 
 ## Resultados
-<img src='resultslex.png' width='400'>
+<img src='resultslex.png' width='500'>
