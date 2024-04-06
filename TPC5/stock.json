@@ -1,0 +1,32 @@
+[
+    {
+        "cod": "01",
+        "nome": "Chocolate",
+        "quant": 10,
+        "preco": 0.65
+    },
+    {
+        "cod": "02",
+        "nome": "Sumo de laranja",
+        "quant": 15,
+        "preco": 0.5
+    },
+    {
+        "cod": "03",
+        "nome": "Água 033cl",
+        "quant": 15,
+        "preco": 0.4
+    },
+    {
+        "cod": "04",
+        "nome": "Bolo",
+        "quant": 7,
+        "preco": 0.7
+    },
+    {
+        "cod": "05",
+        "nome": "Sandes",
+        "quant": 5,
+        "preco": 0.8
+    }
+]
