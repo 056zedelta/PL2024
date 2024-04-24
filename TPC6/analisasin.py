@@ -1,6 +1,6 @@
 import ply.yacc as yacc
 
-from analisalex import tokens
+from TPC6.analisalex import tokens
 
 variables = {}
 
